@@ -17,7 +17,9 @@ pipeline {
     }
     stage('run') {
       steps {
-        sh 'npm run start'
+        sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash'
+        sh 'nvm install 14.17.2'
+        sh 'npm start'
 
         echo 'successfully run'
       }
