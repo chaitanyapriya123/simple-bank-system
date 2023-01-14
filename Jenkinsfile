@@ -8,27 +8,20 @@ pipeline {
       }
     }
     stage('installing dependencies') {
-
-      steps {
+        steps {
 
         sh 'npm i'
-
         echo 'Dependencies installed'
-
       }
 
     }
-
-
-
     stage('run') {
-
       steps {
-
         sh 'npm run'
 
         echo 'successfully run'
-
       }
 
     }
+  }
+}
