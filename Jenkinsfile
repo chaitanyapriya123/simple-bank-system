@@ -17,7 +17,7 @@ pipeline {
     }
     stage('run') {
       steps {
-        sh 'npm start'
+        sh 'npm run start'
 
         echo 'successfully run'
       }
